@@ -19,7 +19,15 @@ $customTheme: mat.define-theme();
 }
 
 .container {
-    margin-left: 64px;
+    margin-left: 25px;
     margin-right: auto;
-    max-width: 100%;
+    max-width: 98%;
+}
+
+.text-primary{
+    color: #7d00fa;
+}
+
+button.match-input-height{
+    height: var(--mat-form-field-container-height) !important;
 }
