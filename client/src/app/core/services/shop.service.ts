@@ -43,6 +43,12 @@ export class ShopService {
     return this.http.get<Pagination<Product>>(this.baseUrl + 'products', { params });
   };
 
+  // fetch the product details
+  getProductDetails(id: number) {
+    return this.http.get<Product>(this.baseUrl + 'Products/' + id);
+  }
+
+  // fetch the unique brand filter
   getBrand() {
     if (this.brands.length > 0) return;
 
@@ -51,6 +57,7 @@ export class ShopService {
     })
   };
 
+  // fetch the unique types for filter
   getTypes() {
     if (this.types.length > 0) return;
 
